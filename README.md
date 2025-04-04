@@ -13,6 +13,7 @@ Link de la pagina web: https://jsepucas.github.io/III_PFJ/
 ## Índice
 
 1. [Parte I: Conceptos y Teoría](#parte-i-conceptos-y-teoría)
+
    1.1 [El Mural de las Siete Capas](#1-el-mural-de-las-siete-capas)  
    1.2 [Los Dos Pergaminos del Mensajero](#2-los-dos-pergaminos-del-mensajero)  
    1.3 [El Enigma de las Subredes](#3-el-enigma-de-las-subredes)  
