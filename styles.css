@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #1f2937;
+}
+
+header {
+    background-image: url('Imagenes/FondoHeader.JPG');
+    background-size: cover;  /* Asegura que la imagen cubra todo el header */
+    background-position: center center;  /* Centra la imagen */
+    color: white;  /* Para que el texto sea visible sobre la imagen */
+    padding: 2rem 0;  /* Aumenta el espacio interno si es necesario */
+    text-align: center;  /* Centra el texto */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: #021b36;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 1rem;
+    margin: 1rem 0 0;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.toggle button:hover {
+    background-color: #1d4ed8;
+}
+
+.contenido {
+    display: none;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 1rem;
+}
+
+pre {
+    background-color: #e5e7eb;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 4px;
+}
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+}
