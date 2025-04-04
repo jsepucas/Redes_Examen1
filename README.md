@@ -101,3 +101,10 @@ Puedes abrir el archivo index.js para ver la documentación completa en formato 
 ---
 
 ## Entrega
+
+Los archivos y documentación deben ser entregados en un repositorio en GitHub con los siguientes elementos:
+
+- El archivo *README.md* que describe los ejercicios y las configuraciones realizadas.
+- Los archivos *.pkt* correspondientes a cada ejercicio práctico.
+- Un resumen de la configuración de cada ejercicio, incluyendo direcciones IP utilizadas y rutas configuradas.
+- Los archivos *index.js, **styles.css* y *pages.html* con la documentación explicativa adicional.
