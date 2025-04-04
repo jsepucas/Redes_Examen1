@@ -8,7 +8,7 @@ Este repositorio contiene la documentación y archivos correspondientes a los ej
 Link del repositorio: https://github.com/jsepucas/III_PFJ.git
 
 
-Link de la pagina web: https://jsepucas.github.io/III_PFJ/
+Link de la pagina web: https://jsepucas.github.io/Redes_Examen1/
 
 ## Índice
 
