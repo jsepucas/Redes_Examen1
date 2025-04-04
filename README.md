@@ -20,10 +20,13 @@ Link de la pagina web: https://jsepucas.github.io/III_PFJ/
    1.5 [El Guardián de la Máscara Única](#5-el-guardian-de-la-mascara-unica)
 
 2. [Parte II: Práctica con Cisco Packet Tracer](#parte-ii-práctica-con-cisco-packet-tracer)
+
    2.1 [La Ruta Perdida entre Dos Reinos](#ejercicio-1-la-ruta-perdida-entre-dos-reinos)  
+
    2.2 [La Ciudad de las Redes Aisladas](#ejercicio-2-la-ciudad-de-las-redes-aisladas)
 
 3. [Documentación](#documentación)  
+
 4. [Entrega](#entrega)  
 
 ---
