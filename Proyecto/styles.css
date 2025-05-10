@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-image: url('Imagenes/FondoHeader.JPG');
+    background-image: url('../Imagenes/FondoHeader.JPG');
     background-size: cover;  /* Asegura que la imagen cubra todo el header */
     background-position: center center;  /* Centra la imagen */
     color: white;  /* Para que el texto sea visible sobre la imagen */
