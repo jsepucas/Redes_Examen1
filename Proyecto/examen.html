@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen de Redes II - En Busca de la Red Perdida</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+</head>
+<body>
+<header>
+    <h1>🌐 Examen de Redes II</h1>
+    <p>En busca de la red perdida</p>
+    <nav>
+              <ul>
+                  <li><a href="#teoria">Parte I: Teoría</a></li>
+                <li><a href="#practica">Parte II: Práctica</a></li>
+              </ul>
+              <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                  <li><a href="#teoria">Parte I: Teoría</a></li>
+                   <li><a href="#practica">Parte II: Práctica</a></li>
+               </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="intro" class="card">
+        <h2>📜 Introducción</h2>
+        <p>Bienvenido, Rubén. Esta es mi documentación técnica para el examen del 4 de abril de 2025.</p>
+        <p>En este examen, se presenta un escenario en el que debo restaurar la conectividad de una antigua ciudad digital. A través de dos partes, primero verás la teoría de redes y luego aplicaré mis conocimientos en Cisco Packet Tracer.</p>
+    </section>
+
+    <section id="teoria" class="card">
+        <h2>🔍 Parte I: Conceptos y Teoría</h2>
+        <div class="toggle">
+            <button onclick="toggleContent('mural')">1. El Mural de las Siete Capas</button>
+            <div id="mural" class="contenido">
+                <p>Este ejercicio se refiere al modelo OSI. Cada franja representa una de sus capas:</p>
+                <p><strong>Introducción:</strong>El mural de las siete capas que se encuentra en la sala principal del templo simboliza el Modelo OSI (Interconexión de Sistemas Abiertos), una estructura conceptual que describe el proceso mediante el cual los datos se trasladan desde una aplicación en un dispositivo hasta otra aplicación en un dispositivo remoto. Esto lo deducimos del enunciado, que menciona que el mural está compuesto por siete franjas horizontales, y curiosamente, cada una representa un nivel distinto dentro de un proceso de comunicación, lo que coincide con las siete capas que transforman y procesan la información.
+
+                    <!-- Imagen del Modelo OSI -->
+                <img src="../Imagenes/ModeloOsi.png" alt="Modelo OSI" style="max-width:100%; margin: 1rem 0; border-radius: 8px; border: 1px solid #ccc;" />
+
+                <!-- Explicación de cada capa -->
+                <ul>
+                    <li><strong>Capa 7 - Aplicación:</strong> Esta capa es la interfaz final para los usuarios. Aquí es donde se encuentran las aplicaciones que utilizan los usuarios, como navegadores web y clientes de correo electrónico.</li>
+                    <br>
+                    <li><strong>Capa 6 - Presentación:</strong> La capa de presentación traduce y formatea los datos para que sean comprensibles para la aplicación. Se encarga de la conversión de datos, como la codificación de imágenes o textos.</li>
+                    <br>
+                    <li><strong>Capa 5 - Sesión:</strong> La capa de sesión maneja las sesiones de comunicación entre dispositivos. Se asegura de que la comunicación entre aplicaciones continúe sin interrupciones, estableciendo, manteniendo y cerrando las sesiones.</li>
+                    <br>
+                    <li><strong>Capa 4 - Transporte:</strong> La capa de transporte garantiza la entrega confiable de datos. Se encarga de dividir los datos en paquetes y asegurar que lleguen correctamente al destino, utilizando protocolos como TCP y UDP.</li>
+                    <br>
+                    <li><strong>Capa 3 - Red:</strong> La capa de red se encarga de gestionar el enrutamiento de los datos entre redes. Los routers operan en esta capa para dirigir los datos a su destino final.</li>
+                    <br>
+                    <li><strong>Capa 2 - Enlace de Datos:</strong> La capa de enlace de datos asegura la transmisión de datos a través de enlaces físicos. Se encarga de la corrección de errores y el direccionamiento físico utilizando direcciones MAC.</li>
+                    <br>
+                    <li><strong>Capa 1 - Física:</strong> Esta es la capa fundamental para la transmisión de datos. Se ocupa de la transmisión de bits a través de un medio físico, como cables, fibras ópticas o señales inalámbricas.</li>
+                </ul>
+            </div>
+
+            <button onclick="toggleContent('mensajeros')">2. Los Dos Pergaminos del Mensajero</button>
+            <div id="mensajeros" class="contenido">
+                <h3>Interpretación del Ejercicio: Los Dos Pergaminos del Mensajero</h3>
+                <p>El enunciado describe dos rituales: el Mensajero Confiable y el Mensajero Veloz. Cada uno representa diferentes enfoques de transmisión de datos, y se pide que los interpretes como protocolos de comunicación en redes modernas.</p>
+
+                <!-- Ritual del Mensajero Confiable -->
+                <h4>1. Ritual del Mensajero Confiable:</h4>
+                <h5>Protocolo equivalente: TCP (Transmission Control Protocol)</h5>
+                <p>El protocolo TCP es confiable y garantiza que los mensajes se entreguen correctamente, de manera similar al ritual del mensajero confiable que espera una confirmación.</p>
+
+                <ul>
+                    <li><strong>Características clave:</strong></li>
+                    <ul>
+                        <li>Establecimiento de conexión (similar a los "tres pasos de saludo").</li>
+                        <li>Confirmación de recepción (similar a la confirmación de entrega).</li>
+                        <li>Reintento de envío si no se recibe la confirmación (retransmisiones).</li>
+                    </ul>
+                    <li><strong>Ventajas de TCP:</strong></li>
+                    <ul>
+                        <li>Alta fiabilidad, asegurando que los datos lleguen correctamente.</li>
+                        <li>Garantiza el orden de los paquetes.</li>
+                    </ul>
+                    <li><strong>Desventajas de TCP:</strong></li>
+                    <ul>
+                        <li>Mayor latencia debido a la confirmación y retransmisión.</li>
+                        <li>Mayor consumo de ancho de banda debido al control de errores.</li>
+                    </ul>
+                </ul>
+                <img src="../Imagenes/TcpUdp.png" alt="Comparativa TCP vs UDP" style="max-width:100%; margin: 2rem 0; border-radius: 8px; border: 1px solid #ccc;" />
+
+
+                <!-- Ritual del Mensajero Veloz -->
+                <h4>2. Ritual del Mensajero Veloz:</h4>
+                <h5>Protocolo equivalente: UDP (User Datagram Protocol)</h5>
+                <p>UDP es un protocolo más rápido pero menos confiable. No garantiza la entrega ni el orden de los paquetes, similar al mensajero veloz que entrega los mensajes sin esperar confirmación.</p>
+
+                <ul>
+                    <li><strong>Características clave:</strong></li>
+                    <ul>
+                        <li>Envío sin confirmación (como el mensajero veloz que no espera una respuesta).</li>
+                        <li>Menor sobrecarga de procesamiento (más rápido).</li>
+                    </ul>
+                    <li><strong>Ventajas de UDP:</strong></li>
+                    <ul>
+                        <li>Baja latencia, más rápido que TCP.</li>
+                        <li>Menor consumo de ancho de banda, ya que no hay retransmisiones ni confirmaciones.</li>
+                    </ul>
+                    <li><strong>Desventajas de UDP:</strong></li>
+                    <ul>
+                        <li>Menos confiabilidad, los datos pueden perderse o llegar fuera de orden.</li>
+                        <li>No tiene control de flujo ni control de errores.</li>
+                    </ul>
+                </ul>
+                <img src="../Imagenes/ProsContras.png" alt="Pros y Contras de TCP y UDP" style="max-width:100%; margin: 2rem 0; border-radius: 8px; border: 1px solid #ccc;" />
+
+            </div>
+
+
+            <button onclick="toggleContent('subredes')">3. El Enigma de las Subredes</button>
+            <div id="subredes" class="contenido">
+                <p>Avanzando por un pasillo, encuentras una losa de piedra con inscripciones que parecen ser direcciones numéricas. Una inscripción cuenta: "Nuestro reino digital tenía la dirección sagrada 192.168.50.0. Los cuatro grandes gremios de la ciudad exigían su propio distrito en la red, todos de igual tamaño". Junto a esto, ves un diagrama borroso de algo que parecen ser subredes emanando de la dirección principal, cada una con su propio identificador.</p>
+
+                <p><strong>Pregunta:</strong> Descifra el enigma de la losa. Si la antigua red usaba la dirección 192.168.50.0 como base y necesitaba dividirse en 4 subredes de igual tamaño, ¿qué máscara de subred habrían utilizado los antiguos para lograrlo? ¿Cuántas direcciones de host (utilizables) tendría cada subred resultante? Explica brevemente tu razonamiento al calcular la máscara.</p>
+
+                <h3>Tras descifrar el enigma descubrimos lo siguiente:</h3>
+                <p>Dirección de red principal ➞ 192.168.50.0/24, lo que indica que la red tiene una máscara de subred de 255.255.255.0, la cual permite tener hasta 254 direcciones de host en total.</p>
+                <p>Como nos señala el enunciado, necesitamos dividir esta red en cuatro subredes de igual tamaño. Esto significa que necesitamos utilizar bits del campo de host para generar más subredes.</p>
+
+                <h3>Cálculo de la máscara de subred:</h3>
+                <p>La red original tiene una máscara /24, es decir, 24 bits para la red.</p>
+                <p>Para crear las 4 subredes, necesitamos 2 bits adicionales.</p>
+                <p>2<sup>2</sup> = 4 subredes.</p>
+                <p>Al tomar 2 bits del campo de host, la nueva máscara será /26, es decir:</p>
+                <p><strong>Máscara de subred:</strong> 255.255.255.192</p>
+
+                <h3>Cálculo de direcciones de host por subred:</h3>
+                <p>La máscara /26 deja 6 bits para los hosts.</p>
+                <p>32 - 26 = 6 bits.</p>
+                <p>El número total de direcciones de host posibles:</p>
+                <p>2<sup>6</sup> = 64 direcciones.</p>
+                <p>Sin embargo, 2 direcciones de cada subred se utilizan para la dirección de red y la dirección de broadcast, por lo que las direcciones de host utilizables serán:</p>
+                <p>64 - 2 = 62 direcciones utilizables por subred.</p>
+
+                <h3>Subredes resultantes:</h3>
+                <table>
+                    <tr>
+                        <th>Subred</th>
+                        <th>Dirección de Red</th>
+                        <th>Rango de Hosts</th>
+                        <th>Dirección de Broadcast</th>
+                        <th>Número de Hosts Utilizables</th>
+                    </tr>
+                    <tr>
+                        <td>Subred 1</td>
+                        <td>192.168.50.0/26</td>
+                        <td>192.168.50.1 a 192.168.50.62</td>
+                        <td>192.168.50.63</td>
+                        <td>62</td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>Subred 2</td>
+                        <td>192.168.50.64/26</td>
+                        <td>192.168.50.65 a 192.168.50.126</td>
+                        <td>192.168.50.127</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>Subred 3</td>
+                        <td>192.168.50.128/26</td>
+                        <td>192.168.50.129 a 192.168.50.190</td>
+                        <td>192.168.50.191</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>Subred 4</td>
+                        <td>192.168.50.192/26</td>
+                        <td>192.168.50.193 a 192.168.50.254</td>
+                        <td>192.168.50.255</td>
+                        <td>62</td>
+                    </tr>
+                </table>
+
+                <h3>Explicación de términos:</h3>
+                <ul>
+                    <li><strong>Dirección de Red:</strong> La primera dirección de cada subred, que no se puede asignar a un host.</li>
+                    <li><strong>Rango de Hosts:</strong> El rango de direcciones utilizables para asignar a los dispositivos dentro de cada subred.</li>
+                    <li><strong>Dirección de Broadcast:</strong> La última dirección de cada subred, usada para enviar mensajes a todos los dispositivos de esa subred.</li>
+                    <li><strong>Número de Hosts Utilizables:</strong> El total de direcciones que pueden asignarse a los dispositivos dentro de la subred, excluyendo la dirección de red y la de broadcast.</li>
+                </ul>
+
+                <h3>Diagrama de las Subredes:</h3>
+                <img src="../Imagenes/EstructuraSubredes.png" alt="Diagrama de subredes" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+            </div>
+
+
+            <button onclick="toggleContent('rutas')">4. La Encrucijada de las Rutas</button>
+            <div id="rutas" class="contenido">
+                <p>El tótem representa una <strong>tabla de enrutamiento</strong>. Las flechas fijas son rutas estáticas; las móviles, rutas dinámicas aprendidas por protocolos como OSPF o RIP.</p>
+
+                <h3>¿Qué es una tabla de enrutamiento?</h3>
+                <p>En redes modernas, la tabla de enrutamiento es una lista que contiene las rutas (direcciones) que un router utiliza para enviar paquetes hacia su destino. Cada vez que un paquete llega a un router, este consulta su tabla de enrutamiento para decidir la mejor ruta hacia el siguiente salto.</p>
+                <p>Dependiendo de cómo se haya configurado el router, este puede elegir entre rutas <strong>estáticas</strong> (preconfiguradas manualmente) o rutas <strong>dinámicas</strong> (calculadas automáticamente en tiempo real mediante protocolos de enrutamiento).</p>
+
+                <h3>Enrutamiento Estático vs Enrutamiento Dinámico</h3>
+                <p>El enrutamiento estático y dinámico se diferencian principalmente en la forma en que gestionan las rutas y cómo reaccionan ante cambios en la topología de la red.</p>
+
+                <h4>Enrutamiento Estático <em>(Flechas Talladas en Piedra)</em></h4>
+                <p>Las rutas estáticas se configuran manualmente y no cambian a menos que un administrador las modifique. Son fijas e inmutables, como las flechas talladas en piedra en el tótem.</p>
+
+                <h5>Ventajas:</h5>
+                <ul>
+                    <li>No depende de factores externos, por lo que las rutas son predecibles y confiables.</li>
+                    <li>No requiere recursos adicionales, ya que no hay cálculos para encontrar rutas en tiempo real.</li>
+                    <li>Es ideal para redes pequeñas o cuando el tráfico es estable y no cambia.</li>
+                </ul>
+
+                <h5>Desventajas:</h5>
+                <ul>
+                    <li>Si hay un enlace caído o se realiza un cambio en la red, debe modificarse manualmente.</li>
+                    <li>Es difícil de administrar en redes grandes, ya que las rutas deben configurarse individualmente.</li>
+                </ul>
+                <img src="../Imagenes/EnrutamientoEstatico.png" alt="EnrEstat" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+
+                <h4>Enrutamiento Dinámico <em>(Flechas Móviles)</em></h4>
+                <p>Las flechas móviles representan rutas dinámicas que se ajustan automáticamente en función de las condiciones cambiantes de la red, a través de protocolos como <strong>RIP</strong>, <strong>OSPF</strong> o <strong>EIGRP</strong>.</p>
+
+                <h5>Ventajas:</h5>
+                <ul>
+                    <li>Las rutas se ajustan automáticamente cuando un enlace falla o se vuelve inactivo, sin intervención manual.</li>
+                    <li>Es ideal para redes grandes donde la topología cambia frecuentemente.</li>
+                    <li>Utiliza algoritmos para elegir la mejor ruta en función de la situación actual de la red.</li>
+                </ul>
+
+                <h5>Desventajas:</h5>
+                <ul>
+                    <li>Consume más recursos, como CPU y memoria, y genera más tráfico debido a la constante actualización de las tablas de enrutamiento.</li>
+                    <li>Puede ser más complejo de configurar y administrar correctamente, especialmente en redes grandes.</li>
+                </ul>
+                <img src="../Imagenes/EnrutamientoDinamico.png" alt="EnrDinam" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+
+                <h3>Resumen</h3>
+                <p>En resumen, el enrutamiento estático es más adecuado para redes pequeñas y estables, mientras que el enrutamiento dinámico es más útil en redes grandes donde las condiciones cambian con frecuencia. Ambos enfoques tienen sus ventajas y desventajas, y la elección depende de las necesidades específicas de la red.</p>
+
+            </div>
+
+
+            <button onclick="toggleContent('nat')">5. El Guardián de la Máscara Única</button>
+            <div id="nat" class="contenido">
+                <p>En la última sala del templo, el guardián con dos caras representa el funcionamiento del <strong>NAT (Traducción de Direcciones de Red)</strong> en redes modernas. Esta técnica permite que múltiples dispositivos dentro de una red compartan una única dirección IP pública al comunicarse con el mundo exterior.</p>
+
+                <h3>¿Qué es NAT?</h3>
+                <p><strong>NAT</strong> es un mecanismo utilizado en redes para modificar las direcciones IP de los paquetes de datos mientras estos pasan a través de un dispositivo como un router o un firewall. Su principal objetivo es permitir que varios dispositivos dentro de una red local (como ordenadores, impresoras o teléfonos) compartan una única dirección IP pública cuando acceden a Internet. De esta forma, los dispositivos internos pueden comunicarse hacia el exterior sin necesidad de que cada uno tenga su propia IP pública.</p>
+
+                <h3>¿Cómo permite NAT que varios dispositivos compartan una única dirección?</h3>
+                <p>Cuando un dispositivo interno, como un PC, quiere enviar datos a Internet, el router realiza lo siguiente:</p>
+                <ul>
+                    <li>Cambia la dirección IP interna del dispositivo por su propia dirección IP pública antes de enviar el paquete.</li>
+                    <li>Cuando el mensaje regresa desde Internet, el router usa las tablas de NAT para identificar a qué dispositivo interno corresponde la solicitud y reenvía el paquete al dispositivo correcto.</li>
+                </ul>
+                <img src="../Imagenes/Benef.png" alt="Benef" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+
+                <h3>Beneficios de NAT:</h3>
+                <ul>
+                    <li><strong>Aislamiento de la red interna:</strong> Mejora la seguridad al actuar como una barrera entre la red interna y el mundo exterior.</li>
+                    <li><strong>Facilita el acceso remoto:</strong> Permite acceder a servicios internos desde el exterior mediante Port Forwarding, sin exponer toda la red.</li>
+                    <br>
+                    <li><strong>Uso eficiente de direcciones privadas:</strong> Facilita el uso de direcciones IP privadas dentro de la red local, lo que reduce la necesidad de direcciones IP públicas.</li>
+                    <br>
+                    <li><strong>Mejor control de tráfico:</strong> Permite a los administradores controlar y monitorear el tráfico saliente, facilitando la implementación de políticas de acceso.</li>
+                    <br>
+                    <li><strong>Reducción de costos:</strong> Al compartir una sola IP pública entre varios dispositivos, se reduce la necesidad de adquirir direcciones IP públicas adicionales.</li>
+                    <li><strong>Escalabilidad:</strong> Ofrece flexibilidad en redes crecientes, ya que no requiere nuevas IPs públicas a medida que más dispositivos se añaden.</li>
+                    <br>
+                    <li><strong>Mejor seguridad y privacidad:</strong> Oculta las direcciones IP internas, mejorando la protección de la red local.</li>
+                    <br>
+                    <li><strong>Transición a IPv6:</strong> Facilita la convivencia entre redes IPv4 e IPv6, permitiendo que ambos protocolos operen simultáneamente.</li>
+                    <br>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="practica" class="card">
+        <h2>🛠 Parte II: Práctica con Cisco Packet Tracer</h2>
+        <div class="toggle">
+            <button onclick="toggleContent('ej1')">Ejercicio 1: Ruta Perdida entre Dos Reinos</button>
+            <div id="ej1" class="contenido">
+                <p><strong>Documentación Técnica:</strong> Reconstrucción de Redes en las Ciudades Perdidas</p>
+                <p><strong>Introducción:</strong> En este ejercicio, restauramos la conexión entre dos ciudades separadas por un desierto, utilizando Cisco Packet Tracer. Configuramos una red que conecta ambas ciudades a través de un enlace WAN, creando una topología robusta usando routers, switches, dispositivos finales y una nube WAN con Frame Relay.</p>
+                <img src="../Imagenes/topologia-ejercicio1.png" alt="Topología general ejercicio 1 - Conexión entre dos ciudades" style="max-width:100%; margin: 1rem 0; border-radius: 8px; border: 1px solid #ccc;" />
+                <p><strong>Topología de la Red:</strong></p>
+                <ul>
+                    <li>Router A (Ciudad A) y Router B (Ciudad B) conectados por un enlace WAN</li>
+                    <li>Switches en cada ciudad para gestionar las redes LAN</li>
+                    <li>Dispositivos finales (laptops, tablets, PCs) conectados a los switches</li>
+                    <li>Cloud PT simulando una nube con conexión Frame Relay</li>
+                </ul>
+                <p><strong>Equipos y Enlaces Principales:</strong></p>
+                <ul>
+                    <li><strong>Router A (Cisco 1841):</strong>
+                        <ul>
+                            <li>FastEthernet0/0: 192.168.10.1/24 (LAN Ciudad A)</li>
+                            <li>Serial0/1/0: 192.168.30.1/30 (WAN a Router B)</li>
+                            <li>Ruta estática: <pre><code>ip route 192.168.20.0 255.255.255.0 192.168.30.2</code></pre></li>
+                        </ul>
+                    </li>
+                    <li><strong>Router B (Cisco 1841):</strong>
+                        <ul>
+                            <li>FastEthernet0/0: 192.168.20.1/24 (LAN Ciudad B)</li>
+                            <li>Serial0/1/0: 192.168.30.2/30 (WAN a Router A)</li>
+                            <li>Ruta estática: <pre><code>ip route 192.168.10.0 255.255.255.0 192.168.30.1</code></pre></li>
+
+                        </ul>
+                    </li>
+                    <li><strong>Cloud PT (Nube WAN):</strong> Frame Relay entre ambos routers con DLCIs 100 y 200</li>
+                </ul>
+                <p><strong>Configuración de la Nube WAN:</strong> Se configuró Frame Relay con los siguientes comandos:</p>
+                <pre>
+interface Serial0/1/0
+
+ encapsulation frame-relay
+  </pre>
+                <p>Asignación de DLCI:
+                <ul>
+                    <li>Router A: DLCI 100</li>
+                    <li>Router B: DLCI 200</li>
+                </ul>
+                </p>
+                <p><strong>Configuración de Switches:</strong> Cada ciudad tiene un switch configurado con una VLAN:</p>
+                <ul>
+                    <li>Ciudad A: VLAN 10</li>
+                    <li>Ciudad B: VLAN 20</li>
+                </ul>
+                <p>Las interfaces del switch fueron asignadas como access y vinculadas a sus respectivas VLANs.</p>
+                <p><strong>Configuración de Dispositivos Finales:</strong></p>
+                <ul>
+                    <li><strong>Ciudad A:</strong>
+                        <ul>
+                            <li>Laptop A: 192.168.10.13</li>
+                            <li>Tablet A: 192.168.10.14</li>
+                            <li>PC A1: 192.168.10.10</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ciudad B:</strong>
+                        <ul>
+                            <li>Laptop B: 192.168.20.13</li>
+                            <li>Tablet B: 192.168.20.14</li>
+                            <li>PC B4: 192.168.20.10</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Capturas de Pantalla:</strong></p>
+                <p><strong>Ping desde PC A a PC B:</strong></p>
+                <img src="captura-pca-pcb.png" alt="Ping desde Ciudad A a Ciudad B" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+                <p><strong>Ping entre Tablet de Ciudad B y Laptop de Ciudad A:</strong></p>
+                <img src="../Imagenes/captura-tablet-b-laptop-a.png" alt="Ping entre Ciudad B y Ciudad A" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+
+                <p><strong>Conclusión:</strong> Tras la implementación de la red completa con routers, switches, VLANs y Frame Relay, la conectividad entre Ciudad A y Ciudad B quedó restaurada. La configuración estática y la simulación de WAN fueron efectivas.</p>
+            </div>
+
+            <button onclick="toggleContent('ej2')">Ejercicio 2: Ciudad de las Redes Aisladas</button>
+            <div id="ej2" class="contenido">
+                <p><strong>Documentación Técnica:</strong> Restauración de las Redes de la Ciudad Perdida</p>
+                <p><strong>Introducción: </strong> En este ejercicio, como parte de la misión para restaurar las redes de una antigua ciudad, se configuró una infraestructura de red segmentada utilizando VLANs y un router-on-a-stick. El objetivo era devolver la comunicación entre las diferentes facciones de la ciudad, que estaban aisladas en VLANs distintas. A través de esta reconstrucción, se restableció la conexión entre los gremios de Arquitectos, Escribas y Magos, permitiendo la comunicación entre ellos a través de un router Cisco 1941 y un switch Cisco 2960. </p>
+                <img src="../Imagenes/topologia-ejercicio2.png" alt="Topología VLANs Router-on-a-Stick" style="max-width:100%; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 8px;" />
+                <p><strong>Equipos Utilizados:</strong></p>
+                <ul>
+                    <li>Router Cisco 1941</li>
+                    <li>Switch Cisco 2960</li>
+                    <li>PCs Genéricos asignados a diferentes VLANs</li>
+                </ul>
+                <p><strong>VLANs y Subredes:</strong></p>
+                <ul>
+                    <li>VLAN 10 (Arquitectos): 192.168.10.0/24</li>
+                    <li>VLAN 20 (Escribas): 192.168.20.0/24</li>
+                    <li>VLAN 30 (Magos): 192.168.30.0/24</li>
+                </ul>
+                <p><strong>Direcciones IP:</strong></p>
+                <ul>
+                    <li>Arquitectos: PC1 (.2), PC2 (.3), PC3 (.4)</li>
+                    <li>Escribas: PC4 (.2), PC5 (.3), PC6 (.4)</li>
+                    <li>Magos: PC7 (.2), PC8 (.3)</li>
+                </ul>
+                <p><strong>Router - Subinterfaces:</strong></p>
+                <pre>
+interface Fa0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+
+interface Fa0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+
+interface Fa0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+          </pre>
+                <p><strong>Switch - Configuración:</strong></p>
+                <pre>
+vlan 10
+ name Arquitectos
+exit
+vlan 20
+ name Escribas
+exit
+vlan 30
+ name Magos
+exit
+
+interface range fa0/2 - 4
+ switchport mode access
+ switchport access vlan 10
+exit
+
+interface range fa0/5 - 7
+ switchport mode access
+ switchport access vlan 20
+exit
+
+interface range fa0/8 - 9
+ switchport mode access
+ switchport access vlan 30
+exit
+
+interface fa0/1
+ switchport mode trunk
+exit
+          </pre>
+                <p><strong>Verificación de Conectividad:</strong> Se realizaron pings exitosos entre PCs de la misma VLAN y entre VLANs distintas, confirmando la funcionalidad del enrutamiento inter-VLAN.</p>
+                <p><strong>Capturas de Pantalla:</strong></p>
+                <p><strong>Ping en la misma VLAN (Arquitectos)</strong></p>
+                <img src="../Imagenes/captura-pc1-pc4.png" alt="Ping de 192.168.10.2 a 192.168.10.4" style="max-width:100%; margin-bottom:1rem;" />
+                <p><strong>Ping entre VLANes distintas</strong></p>
+                <img src="../Imagenes/captura-pc4-pc2.png" alt="Ping de 192.168.20.2 a 192.168.10.2" style="max-width:100%; margin-bottom:1rem;" />
+                <p><strong>Conclusión:</strong> La configuración de Router-on-a-Stick fue exitosa. La ciudad digital ha sido restaurada, y los gremios se comunican sin interferencias.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy;Proyecto en Cisco Packet Tracer</p>
+</footer>
+</body>
+</html>
